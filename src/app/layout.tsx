@@ -23,11 +23,30 @@ export const metadata: Metadata = {
     "Process Design",
   ],
   authors: [{ name: "Muhammad Akram Ansari" }],
+  icons: {
+    icon: "/icon.svg",
+    apple: "/apple-icon.svg",
+  },
   openGraph: {
     title: "Engr. Muhammad Akram Ansari | Professional Chemical Engineer",
     description:
       "Professional Chemical Engineer with 30+ years of experience. PEC Registered (CHEM/02752).",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 500,
+        height: 500,
+        alt: "Engr. Muhammad Akram Ansari - Professional Chemical Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Engr. Muhammad Akram Ansari | Professional Chemical Engineer",
+    description:
+      "Professional Chemical Engineer with 30+ years of experience. PEC Registered (CHEM/02752).",
+    images: ["/og-image.png"],
   },
 };
 
