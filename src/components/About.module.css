@@ -1,0 +1,495 @@
+/* ===== ABOUT — Creative Redesign ===== */
+.section {
+  padding: 48px 0;
+  background: var(--section-alt);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding: 60px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 80px 0;
+  }
+}
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--px);
+  position: relative;
+  z-index: 2;
+}
+
+/* Section header */
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 640px) {
+  .header {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    margin-bottom: 48px;
+  }
+}
+
+.label {
+  color: var(--accent-blue);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 640px) {
+  .label {
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+  }
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-white);
+  line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.75rem;
+  }
+}
+
+.divider {
+  width: 64px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-gold));
+  border-radius: 2px;
+  margin: 20px auto 0;
+}
+
+/* ===== TOP: Bio + Plant Visual ===== */
+.topRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 640px) {
+  .topRow {
+    gap: 36px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .topRow {
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+}
+
+/* Bio side */
+.bioTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (min-width: 640px) {
+  .bioTitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    gap: 12px;
+  }
+}
+
+.bioTitleLine {
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-gold));
+  border-radius: 2px;
+}
+
+.bioText {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 14px;
+  font-size: 0.92rem;
+}
+
+@media (min-width: 640px) {
+  .bioText {
+    font-size: 1.02rem;
+    line-height: 1.9;
+    margin-bottom: 16px;
+  }
+}
+
+.bioTextMuted {
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-size: 0.88rem;
+}
+
+@media (min-width: 640px) {
+  .bioTextMuted {
+    font-size: 0.95rem;
+    line-height: 1.9;
+  }
+}
+
+.blueText {
+  color: var(--accent-blue-light);
+  font-weight: 600;
+}
+
+.goldText {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+/* PEC inline badge */
+.pecInline {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.08),
+    rgba(16, 185, 129, 0.02)
+  );
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: var(--radius);
+  transition: border-color 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  .pecInline {
+    margin-top: 28px;
+    gap: 16px;
+    padding: 16px 24px;
+  }
+}
+
+.pecInline:hover {
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.pecShield {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pecShield svg {
+  width: 22px;
+  height: 22px;
+  color: var(--accent-emerald-light);
+}
+
+.pecInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.pecLabel {
+  color: var(--text-white);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.pecNum {
+  color: var(--accent-emerald-light);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* Visual / Plant illustration side */
+.visualSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plantVisual {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  background: transparent;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.plantGif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+/* Overlay text on plant visual */
+.plantOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 24px;
+  background: linear-gradient(transparent, rgba(15, 23, 42, 0.95));
+}
+
+.plantOverlayText {
+  color: var(--accent-gold-light);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 2px;
+}
+
+.plantOverlaySub {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+/* Floating metric badges on visual */
+.floatBadge {
+  position: absolute;
+  padding: 10px 16px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xs);
+  backdrop-filter: blur(8px);
+  z-index: 3;
+}
+
+.floatBadgeTR {
+  top: 16px;
+  right: 16px;
+}
+
+.floatBadgeBL {
+  bottom: 16px;
+  left: 16px;
+}
+
+.floatBadgeVal {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-white);
+  line-height: 1.2;
+}
+
+.floatBadgeLabel {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ===== BOTTOM: Competency Grid ===== */
+.compGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .compGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .compGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.compCard {
+  position: relative;
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .compCard {
+    padding: 28px 24px;
+  }
+}
+
+.compCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-gold));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.compCard:hover {
+  border-color: rgba(59, 130, 246, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.3);
+}
+
+.compCard:hover::before {
+  opacity: 1;
+}
+
+.compIconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.compIconWrap svg {
+  width: 24px;
+  height: 24px;
+}
+
+.iconBlue {
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--accent-blue-light);
+}
+
+.iconGold {
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--accent-gold-light);
+}
+
+.iconEmerald {
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--accent-emerald-light);
+}
+
+.iconPurple {
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--accent-purple);
+}
+
+.compCardTitle {
+  color: var(--text-white);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.compCardDesc {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+/* ===== INDUSTRIES ROW ===== */
+.industryRow {
+  margin-top: 32px;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .industryRow {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .industryRow {
+    margin-top: 48px;
+  }
+}
+
+.industryLabel {
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+@media (min-width: 640px) {
+  .industryLabel {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+  }
+}
+
+.industryTags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media (min-width: 640px) {
+  .industryTags {
+    gap: 12px;
+  }
+}
+
+.industryTag {
+  padding: 8px 16px;
+  border-radius: 100px;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid var(--border-light);
+  color: var(--text-light);
+  font-size: 0.78rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+@media (min-width: 640px) {
+  .industryTag {
+    padding: 10px 22px;
+    font-size: 0.85rem;
+  }
+}
+
+.industryTag:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue-light);
+  background: rgba(59, 130, 246, 0.08);
+}

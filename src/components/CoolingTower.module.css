@@ -1,0 +1,356 @@
+/* ===== COOLING TOWER ANIMATED SVG ===== */
+.wrapper {
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ===== CONTINUOUS SMOKE ANIMATIONS ===== */
+
+/* Main cooling tower smoke — staggered rising + drifting */
+.smoke1 {
+  animation: smokeRise1 4s ease-in-out infinite;
+}
+.smoke2 {
+  animation: smokeRise2 5s ease-in-out infinite;
+}
+.smoke3 {
+  animation: smokeRise3 4.5s ease-in-out infinite;
+}
+.smoke4 {
+  animation: smokeRise4 6s ease-in-out infinite;
+}
+.smoke5 {
+  animation: smokeRise5 5.5s ease-in-out infinite;
+}
+.smoke6 {
+  animation: smokeRise6 7s ease-in-out infinite;
+}
+.smoke7 {
+  animation: smokeRise7 4s ease-in-out infinite 0.5s;
+}
+.smoke8 {
+  animation: smokeRise8 5s ease-in-out infinite 1s;
+}
+.smoke9 {
+  animation: smokeRise9 6s ease-in-out infinite 0.8s;
+}
+
+/* Left chimney smoke */
+.cSmoke1 {
+  animation: cSmokeA 4s ease-in-out infinite;
+}
+.cSmoke2 {
+  animation: cSmokeB 5s ease-in-out infinite 0.5s;
+}
+.cSmoke3 {
+  animation: cSmokeC 4.5s ease-in-out infinite 1s;
+}
+.cSmoke4 {
+  animation: cSmokeD 6s ease-in-out infinite 0.3s;
+}
+
+/* Right chimney smoke */
+.rSmoke1 {
+  animation: rSmokeA 4.5s ease-in-out infinite;
+}
+.rSmoke2 {
+  animation: rSmokeB 5s ease-in-out infinite 0.7s;
+}
+.rSmoke3 {
+  animation: rSmokeC 6s ease-in-out infinite 0.4s;
+}
+
+/* Pipe steam */
+.pipeSteam1 {
+  animation: pSteam1 3s ease-in-out infinite;
+}
+.pipeSteam2 {
+  animation: pSteam2 3.5s ease-in-out infinite 0.5s;
+}
+
+/* Blinking lights */
+.blink {
+  animation: blinkAnim 2s ease-in-out infinite;
+}
+.blink2 {
+  animation: blinkAnim 2.5s ease-in-out infinite 0.5s;
+}
+
+/* ===== KEYFRAMES — Main tower smoke ===== */
+@keyframes smokeRise1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(5px, -12px) scale(1.2);
+    opacity: 0.35;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+}
+@keyframes smokeRise2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate(-8px, -15px) scale(1.3);
+    opacity: 0.25;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.45;
+  }
+}
+@keyframes smokeRise3 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(10px, -18px) scale(1.15);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.4;
+  }
+}
+@keyframes smokeRise4 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translate(-6px, -20px) scale(1.4);
+    opacity: 0.15;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.35;
+  }
+}
+@keyframes smokeRise5 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(12px, -14px) scale(1.2);
+    opacity: 0.15;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+}
+@keyframes smokeRise6 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(-10px, -25px) scale(1.5);
+    opacity: 0.08;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.25;
+  }
+}
+@keyframes smokeRise7 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(6px, -10px) scale(1.1);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.4;
+  }
+}
+@keyframes smokeRise8 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translate(-5px, -13px) scale(1.25);
+    opacity: 0.15;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.35;
+  }
+}
+@keyframes smokeRise9 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(8px, -22px) scale(1.35);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+}
+
+/* ===== KEYFRAMES — Left chimney smoke ===== */
+@keyframes cSmokeA {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate(4px, -10px) scale(1.15);
+    opacity: 0.25;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.45;
+  }
+}
+@keyframes cSmokeB {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(-6px, -14px) scale(1.3);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.4;
+  }
+}
+@keyframes cSmokeC {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translate(8px, -16px) scale(1.2);
+    opacity: 0.15;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.35;
+  }
+}
+@keyframes cSmokeD {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-5px, -20px) scale(1.4);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+}
+
+/* ===== KEYFRAMES — Right chimney smoke ===== */
+@keyframes rSmokeA {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(-4px, -10px) scale(1.15);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.4;
+  }
+}
+@keyframes rSmokeB {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translate(6px, -14px) scale(1.25);
+    opacity: 0.15;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.35;
+  }
+}
+@keyframes rSmokeC {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-7px, -18px) scale(1.35);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+}
+
+/* ===== KEYFRAMES — Pipe steam ===== */
+@keyframes pSteam1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(3px, -8px) scale(1.3);
+    opacity: 0.05;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.2;
+  }
+}
+@keyframes pSteam2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.18;
+  }
+  50% {
+    transform: translate(-3px, -6px) scale(1.2);
+    opacity: 0.05;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.18;
+  }
+}
+
+/* ===== KEYFRAMES — Blink ===== */
+@keyframes blinkAnim {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
