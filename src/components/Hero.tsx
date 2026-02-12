@@ -107,10 +107,14 @@ export default function Hero() {
                   {/* Gear teeth marks around outer ring */}
                   {[...Array(24)].map((_, i) => {
                     const angle = i * 15 * (Math.PI / 180);
-                    const x1 = 200 + 185 * Math.cos(angle);
-                    const y1 = 200 + 185 * Math.sin(angle);
-                    const x2 = 200 + 195 * Math.cos(angle);
-                    const y2 = 200 + 195 * Math.sin(angle);
+                    const x1 =
+                      Math.round((200 + 185 * Math.cos(angle)) * 100) / 100;
+                    const y1 =
+                      Math.round((200 + 185 * Math.sin(angle)) * 100) / 100;
+                    const x2 =
+                      Math.round((200 + 195 * Math.cos(angle)) * 100) / 100;
+                    const y2 =
+                      Math.round((200 + 195 * Math.sin(angle)) * 100) / 100;
                     return (
                       <line
                         key={i}
@@ -127,8 +131,10 @@ export default function Hero() {
                   {/* Corner node dots */}
                   {[0, 60, 120, 180, 240, 300].map((deg, i) => {
                     const angle = deg * (Math.PI / 180);
-                    const cx = 200 + 190 * Math.cos(angle);
-                    const cy = 200 + 190 * Math.sin(angle);
+                    const cx =
+                      Math.round((200 + 190 * Math.cos(angle)) * 100) / 100;
+                    const cy =
+                      Math.round((200 + 190 * Math.sin(angle)) * 100) / 100;
                     return (
                       <circle
                         key={i}
@@ -173,8 +179,10 @@ export default function Hero() {
                   />
                   {[...Array(12)].map((_, i) => {
                     const angle = i * 30 * (Math.PI / 180);
-                    const cx = 200 + 168 * Math.cos(angle);
-                    const cy = 200 + 168 * Math.sin(angle);
+                    const cx =
+                      Math.round((200 + 168 * Math.cos(angle)) * 100) / 100;
+                    const cy =
+                      Math.round((200 + 168 * Math.sin(angle)) * 100) / 100;
                     return (
                       <circle
                         key={i}
