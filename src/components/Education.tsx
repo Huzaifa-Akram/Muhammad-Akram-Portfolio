@@ -1,6 +1,8 @@
 "use client";
 
+import { motion } from "framer-motion";
 import s from "./Education.module.css";
+import AnimatedSection from "./AnimatedSection";
 
 const education = [
   {
@@ -33,15 +35,28 @@ export default function Education() {
   return (
     <section id="education" className={s.section}>
       <div className={s.container}>
-        <div className={s.header}>
-          <p className={s.label}>Academic Background</p>
-          <h2 className={s.title}>Education</h2>
-          <div className={s.divider}></div>
-        </div>
+        <AnimatedSection>
+          <div className={s.header}>
+            <p className={s.label}>Academic Background</p>
+            <h2 className={s.title}>Education</h2>
+            <div className={s.divider}></div>
+          </div>
+        </AnimatedSection>
 
         <div className={s.grid}>
           {education.map((edu, index) => (
-            <div key={index} className={s.card}>
+            <motion.div
+              key={index}
+              className={s.card}
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.15,
+                ease: [0.25, 0.1, 0.25, 1],
+              }}
+            >
               <span className={s.periodBadge}>{edu.period}</span>
               <h3 className={s.degree}>{edu.degree}</h3>
               <p className={s.institution}>{edu.institution}</p>
@@ -63,7 +78,7 @@ export default function Education() {
                 <span className={s.gradeText}>{edu.grade}</span>
               </div>
               <p className={s.details}>{edu.details}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

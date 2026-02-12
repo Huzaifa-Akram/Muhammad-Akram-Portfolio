@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import s from "./Navbar.module.css";
 
@@ -24,7 +25,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`${s.header} ${isScrolled ? s.headerScrolled : ""}`}>
+    <motion.header
+      className={`${s.header} ${isScrolled ? s.headerScrolled : ""}`}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+    >
       <div className={s.inner}>
         <nav className={s.nav}>
           <Link href="#home" className={s.logo}>
@@ -89,7 +95,13 @@ export default function Navbar() {
         </nav>
 
         {isMobileMenuOpen && (
-          <div className={s.mobileMenu}>
+          <motion.div
+            className={s.mobileMenu}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+          >
             <div className={s.mobileMenuInner}>
               {navItems.map((item) => (
                 <Link
@@ -109,9 +121,9 @@ export default function Navbar() {
                 Get In Touch
               </Link>
             </div>
-          </div>
+          </motion.div>
         )}
       </div>
-    </header>
+    </motion.header>
   );
 }

@@ -2,74 +2,88 @@
 
 import s from "./About.module.css";
 import CoolingTower from "./CoolingTower";
+import AnimatedSection, {
+  StaggerContainer,
+  StaggerItem,
+} from "./AnimatedSection";
 
 export default function About() {
   return (
     <section id="about" className={s.section}>
       <div className={s.container}>
         {/* Section Header */}
-        <div className={s.header}>
-          <p className={s.label}>Get To Know Me</p>
-          <h2 className={s.title}>About Me</h2>
-          <div className={s.divider}></div>
-        </div>
+        <AnimatedSection>
+          <div className={s.header}>
+            <p className={s.label}>Get To Know Me</p>
+            <h2 className={s.title}>About Me</h2>
+            <div className={s.divider}></div>
+          </div>
+        </AnimatedSection>
 
         {/* ===== TOP ROW: Bio + Plant Visual ===== */}
         <div className={s.topRow}>
           {/* Left — Bio */}
-          <div>
-            <h3 className={s.bioTitle}>
-              <span className={s.bioTitleLine}></span>
-              Professional Summary
-            </h3>
-            <p className={s.bioText}>
-              A dedicated{" "}
-              <span className={s.blueText}>Professional Chemical Engineer</span>{" "}
-              with over{" "}
-              <span className={s.goldText}>30 years of experience</span>{" "}
-              spanning petrochemical, resin, fertilizer, and pharmaceutical/API
-              industries.
-            </p>
-            <p className={s.bioTextMuted}>
-              My expertise covers the full spectrum of plant operations — from
-              initial process design to commissioning and production
-              stabilization. I have successfully managed utilities systems,
-              resolved operational bottlenecks, and implemented cost-efficient
-              modifications across multiple industrial facilities.
-            </p>
+          <AnimatedSection direction="left" delay={0.1}>
+            <div>
+              <h3 className={s.bioTitle}>
+                <span className={s.bioTitleLine}></span>
+                Professional Summary
+              </h3>
+              <p className={s.bioText}>
+                A dedicated{" "}
+                <span className={s.blueText}>
+                  Professional Chemical Engineer
+                </span>{" "}
+                with over{" "}
+                <span className={s.goldText}>30 years of experience</span>{" "}
+                spanning petrochemical, resin, fertilizer, and
+                pharmaceutical/API industries.
+              </p>
+              <p className={s.bioTextMuted}>
+                My expertise covers the full spectrum of plant operations — from
+                initial process design to commissioning and production
+                stabilization. I have successfully managed utilities systems,
+                resolved operational bottlenecks, and implemented cost-efficient
+                modifications across multiple industrial facilities.
+              </p>
 
-            {/* PEC Badge */}
-            <div className={s.pecInline}>
-              <div className={s.pecShield}>
-                <svg fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.352.166-2.001zm4.101 3.708a1 1 0 011.414 0L9 10.026l2.32-2.319a1 1 0 111.414 1.414l-3.026 3.026a1 1 0 01-1.414 0L6.267 10.12a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <div className={s.pecInfo}>
-                <span className={s.pecLabel}>Pakistan Engineering Council</span>
-                <span className={s.pecNum}>
-                  CHEM/02752 — Valid till Dec 2026
-                </span>
+              {/* PEC Badge */}
+              <div className={s.pecInline}>
+                <div className={s.pecShield}>
+                  <svg fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fillRule="evenodd"
+                      d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.352.166-2.001zm4.101 3.708a1 1 0 011.414 0L9 10.026l2.32-2.319a1 1 0 111.414 1.414l-3.026 3.026a1 1 0 01-1.414 0L6.267 10.12a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div className={s.pecInfo}>
+                  <span className={s.pecLabel}>
+                    Pakistan Engineering Council
+                  </span>
+                  <span className={s.pecNum}>
+                    CHEM/02752 — Valid till Dec 2026
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
+          </AnimatedSection>
 
           {/* Right — Animated Plant Visual */}
-          <div className={s.visualSide}>
-            <div className={s.plantVisual}>
-              <CoolingTower />
+          <AnimatedSection direction="right" delay={0.3}>
+            <div className={s.visualSide}>
+              <div className={s.plantVisual}>
+                <CoolingTower />
+              </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
 
         {/* ===== COMPETENCY CARDS (4-column) ===== */}
-        <div className={s.compGrid}>
+        <StaggerContainer className={s.compGrid} staggerDelay={0.12}>
           {/* Process Engineering */}
-          <div className={s.compCard}>
+          <StaggerItem className={s.compCard}>
             <div className={`${s.compIconWrap} ${s.iconBlue}`}>
               <svg
                 fill="none"
@@ -89,10 +103,10 @@ export default function About() {
               Expert in PFDs, P&IDs, material & energy balances, equipment
               sizing
             </p>
-          </div>
+          </StaggerItem>
 
           {/* Utilities Management */}
-          <div className={s.compCard}>
+          <StaggerItem className={s.compCard}>
             <div className={`${s.compIconWrap} ${s.iconGold}`}>
               <svg
                 fill="none"
@@ -111,10 +125,10 @@ export default function About() {
             <p className={s.compCardDesc}>
               Steam, cooling water, RO, compressed air, boiler systems
             </p>
-          </div>
+          </StaggerItem>
 
           {/* Commissioning */}
-          <div className={s.compCard}>
+          <StaggerItem className={s.compCard}>
             <div className={`${s.compIconWrap} ${s.iconEmerald}`}>
               <svg
                 fill="none"
@@ -139,10 +153,10 @@ export default function About() {
               Plant pre-commissioning, startup activities, production
               stabilization
             </p>
-          </div>
+          </StaggerItem>
 
           {/* Safety & Compliance */}
-          <div className={s.compCard}>
+          <StaggerItem className={s.compCard}>
             <div className={`${s.compIconWrap} ${s.iconPurple}`}>
               <svg
                 fill="none"
@@ -161,27 +175,29 @@ export default function About() {
             <p className={s.compCardDesc}>
               HAZOP, HAZID, PSSR documentation, EPA compliance expertise
             </p>
-          </div>
-        </div>
+          </StaggerItem>
+        </StaggerContainer>
 
         {/* ===== INDUSTRIES ===== */}
-        <div className={s.industryRow}>
-          <p className={s.industryLabel}>Industries Served</p>
-          <div className={s.industryTags}>
-            {[
-              "Petrochemical",
-              "Pharmaceutical / API",
-              "Fertilizer",
-              "Resin Manufacturing",
-              "Oil Refinery",
-              "Chemical Processing",
-            ].map((industry, index) => (
-              <span key={index} className={s.industryTag}>
-                {industry}
-              </span>
-            ))}
+        <AnimatedSection delay={0.2}>
+          <div className={s.industryRow}>
+            <p className={s.industryLabel}>Industries Served</p>
+            <div className={s.industryTags}>
+              {[
+                "Petrochemical",
+                "Pharmaceutical / API",
+                "Fertilizer",
+                "Resin Manufacturing",
+                "Oil Refinery",
+                "Chemical Processing",
+              ].map((industry, index) => (
+                <span key={index} className={s.industryTag}>
+                  {industry}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );

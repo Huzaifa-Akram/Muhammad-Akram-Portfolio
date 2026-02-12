@@ -1,6 +1,8 @@
 "use client";
 
+import { motion } from "framer-motion";
 import s from "./Experience.module.css";
+import AnimatedSection from "./AnimatedSection";
 
 const experiences = [
   {
@@ -103,21 +105,34 @@ export default function Experience() {
   return (
     <section id="experience" className={s.section}>
       <div className={s.container}>
-        <div className={s.header}>
-          <p className={s.label}>My Journey</p>
-          <h2 className={s.title}>Work Experience</h2>
-          <p className={s.subtitle}>
-            Over three decades of progressive experience in chemical
-            engineering, process design, and plant operations.
-          </p>
-          <div className={s.divider}></div>
-        </div>
+        <AnimatedSection>
+          <div className={s.header}>
+            <p className={s.label}>My Journey</p>
+            <h2 className={s.title}>Work Experience</h2>
+            <p className={s.subtitle}>
+              Over three decades of progressive experience in chemical
+              engineering, process design, and plant operations.
+            </p>
+            <div className={s.divider}></div>
+          </div>
+        </AnimatedSection>
 
         <div className={s.timeline}>
           <div className={s.timelineLine}></div>
           <div className={s.timelineItems}>
             {experiences.map((exp, index) => (
-              <div key={index} className={s.timelineItem}>
+              <motion.div
+                key={index}
+                className={s.timelineItem}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.1,
+                  ease: [0.25, 0.1, 0.25, 1],
+                }}
+              >
                 {/* Dot — positioned absolutely on center line for desktop */}
                 <div className={s.dotWrap}>
                   <div
@@ -177,7 +192,7 @@ export default function Experience() {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

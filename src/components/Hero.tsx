@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import s from "./Hero.module.css";
 import Image from "next/image";
 
@@ -9,7 +10,12 @@ export default function Hero() {
       <div className={s.container}>
         <div className={s.grid}>
           <div className={s.content}>
-            <div className={s.pecBadge}>
+            <motion.div
+              className={s.pecBadge}
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
               <svg fill="currentColor" viewBox="0 0 20 20">
                 <path
                   fillRule="evenodd"
@@ -18,25 +24,54 @@ export default function Hero() {
                 />
               </svg>
               <span>PEC Registered Engineer</span>
-            </div>
+            </motion.div>
 
-            <p className={s.greeting}>Assalam o Alaikum, I am</p>
+            <motion.p
+              className={s.greeting}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              Assalam o Alaikum, I am
+            </motion.p>
 
-            <h1 className={s.name}>
+            <motion.h1
+              className={s.name}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
               Muhammad Akram
               <span className={s.nameGradient}>Ansari</span>
-            </h1>
+            </motion.h1>
 
-            <p className={s.title}>Professional Chemical Engineer</p>
+            <motion.p
+              className={s.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              Professional Chemical Engineer
+            </motion.p>
 
-            <p className={s.description}>
+            <motion.p
+              className={s.description}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
               Over <span className={s.highlight}>30 years</span> of expertise in
               petrochemical, resin, fertilizer, and pharmaceutical industries.
               Specialized in plant operations, utilities management, and process
               engineering.
-            </p>
+            </motion.p>
 
-            <div className={s.stats}>
+            <motion.div
+              className={s.stats}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+            >
               <div className={s.statCard}>
                 <p className={s.statValue}>30+</p>
                 <p className={s.statLabel}>Years Exp.</p>
@@ -49,9 +84,14 @@ export default function Hero() {
                 <p className={s.statValue}>50+</p>
                 <p className={s.statLabel}>Projects</p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className={s.buttons}>
+            <motion.div
+              className={s.buttons}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+            >
               <a href="#contact" className={s.btnPrimary}>
                 Contact Me
                 <svg
@@ -72,10 +112,19 @@ export default function Hero() {
               <a href="#experience" className={s.btnOutline}>
                 View Experience
               </a>
-            </div>
+            </motion.div>
           </div>
 
-          <div className={s.profileWrap}>
+          <motion.div
+            className={s.profileWrap}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.4,
+              ease: [0.25, 0.1, 0.25, 1],
+            }}
+          >
             <div className={s.profileInner}>
               {/* Animated engineering frame */}
               <div className={s.engFrame}>
@@ -213,7 +262,7 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
