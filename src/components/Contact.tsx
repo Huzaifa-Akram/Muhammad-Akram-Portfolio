@@ -14,11 +14,37 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const mailtoLink = `mailto:abdullah1772013@gmail.com?subject=Contact from ${formData.name}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${formData.name}%0AEmail: ${formData.email}`;
-    window.location.href = mailtoLink;
+    setStatus("loading");
+
+    try {
+      const res = await fetch("https://formspree.io/f/meelavba", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus("idle"), 5000);
+      } else {
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 5000);
+      }
+    } catch {
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 5000);
+    }
   };
 
   return (
@@ -152,9 +178,35 @@ export default function Contact() {
                   className={s.formBtn}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
+                  disabled={status === "loading"}
                 >
-                  Send Message
+                  {status === "loading" ? "Sending..." : "Send Message"}
                 </motion.button>
+
+                {status === "success" && (
+                  <p
+                    style={{
+                      color: "#22c55e",
+                      marginTop: "0.75rem",
+                      textAlign: "center",
+                      fontWeight: 500,
+                    }}
+                  >
+                    Message sent successfully!
+                  </p>
+                )}
+                {status === "error" && (
+                  <p
+                    style={{
+                      color: "#ef4444",
+                      marginTop: "0.75rem",
+                      textAlign: "center",
+                      fontWeight: 500,
+                    }}
+                  >
+                    Something went wrong. Please try again.
+                  </p>
+                )}
               </form>
             </div>
           </AnimatedSection>
