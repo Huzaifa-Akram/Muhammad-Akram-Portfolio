@@ -78,10 +78,10 @@ export default function Contact() {
                   <div>
                     <p className={s.infoLabel}>Email</p>
                     <a
-                      href="mailto:thesahra15@gmail.com"
+                      href="mailto:abdullah1772013@gmail.com"
                       className={s.infoLink}
                     >
-                      thesahra15@gmail.com
+                      abdullah1772013@gmail.com
                     </a>
                   </div>
                 </div>
