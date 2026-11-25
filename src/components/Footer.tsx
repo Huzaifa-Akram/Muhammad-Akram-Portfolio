@@ -22,7 +22,7 @@ export default function Footer() {
               </div>
               <div>
                 <p className={s.logoName}>Engr. M. Akram Ansari</p>
-                <p className={s.logoSub}>Chemical Engineer</p>
+                <p className={s.logoSub}>Process &amp; Operations Manager</p>
               </div>
             </div>
 
@@ -30,7 +30,9 @@ export default function Footer() {
               {[
                 "Home",
                 "About",
+                "Achievements",
                 "Experience",
+                "Projects",
                 "Education",
                 "Skills",
                 "Contact",

@@ -1,11 +1,69 @@
 "use client";
 
+import {
+  LuCog,
+  LuCpu,
+  LuFactory,
+  LuFlaskConical,
+  LuShieldCheck,
+  LuZap,
+} from "react-icons/lu";
 import s from "./About.module.css";
 import CoolingTower from "./CoolingTower";
 import AnimatedSection, {
   StaggerContainer,
   StaggerItem,
 } from "./AnimatedSection";
+
+const competencies = [
+  {
+    icon: <LuFactory />,
+    color: s.iconBlue,
+    title: "Plant Operations",
+    desc: "Plug flow reactors, atmospheric, vacuum, batch and steam distillation, off-gas scrubbers and hot-oil systems",
+  },
+  {
+    icon: <LuFlaskConical />,
+    color: s.iconGold,
+    title: "Process Engineering",
+    desc: "FEED, PFDs, P&IDs, M&E balances, datasheets, RFQs, capacity expansion and revamps",
+  },
+  {
+    icon: <LuShieldCheck />,
+    color: s.iconPurple,
+    title: "Process Safety",
+    desc: "HAZOP, HAZID, SIL, PSSR, dispersion studies, ESD, BMC and Cause & Effect",
+  },
+  {
+    icon: <LuCpu />,
+    color: s.iconCyan,
+    title: "Instrumentation & DCS",
+    desc: "Yokogawa µXL, Centum 3000 and SUPCON, interlock logic review, PID and cascade loop tuning",
+  },
+  {
+    icon: <LuZap />,
+    color: s.iconRose,
+    title: "Utilities & Energy",
+    desc: "Boilers, super heaters, hot-oil heaters, chillers, cooling towers, air and nitrogen units, energy audits",
+  },
+  {
+    icon: <LuCog />,
+    color: s.iconEmerald,
+    title: "Commissioning",
+    desc: "Erection, loop checks, master start-up, production stabilization and vendor coordination",
+  },
+];
+
+const industries = [
+  "Petrochemical",
+  "Phthalic & Maleic Anhydride",
+  "Resins & Plasticizers",
+  "Fertilizer (SOP)",
+  "Pharmaceutical / API",
+  "Nutraceuticals",
+  "Oil Refinery",
+  "Chemical Processing",
+];
 
 export default function About() {
   return (
@@ -30,21 +88,42 @@ export default function About() {
                 Professional Summary
               </h3>
               <p className={s.bioText}>
-                A dedicated{" "}
+                A{" "}
                 <span className={s.blueText}>
                   Professional Chemical Engineer
                 </span>{" "}
-                with over{" "}
-                <span className={s.goldText}>30 years of experience</span>{" "}
-                spanning petrochemical, resin, fertilizer, and
-                pharmaceutical/API industries.
+                with{" "}
+                <span className={s.goldText}>
+                  30+ years of operations experience
+                </span>{" "}
+                across petrochemicals, resins, fertilizers and pharma/API,
+                including{" "}
+                <span className={s.goldText}>
+                  20+ years in process management
+                </span>{" "}
+                of two major phthalic anhydride plants (Lurgi technology).
               </p>
               <p className={s.bioTextMuted}>
-                My expertise covers the full spectrum of plant operations — from
-                initial process design to commissioning and production
-                stabilization. I have successfully managed utilities systems,
-                resolved operational bottlenecks, and implemented cost-efficient
-                modifications across multiple industrial facilities.
+                Highly experienced in operating plug flow reactors and
+                atmospheric, vacuum and batch distillation, with complex steam
+                networks and hot-oil systems protected by SIL-rated Safety
+                Instrumented Systems: 3oo3 voting logic, 42 process safety
+                interlocks and Emergency Shutdown (ESD) systems. Also
+                experienced in SOP fertilizer operation, crude oil refining
+                (ARL), asphalt vacuum columns and blending, high-temperature
+                kiln operation, and batch reactors for plasticizers and pharma
+                API salts.
+              </p>
+              <p className={s.bioTextMuted}>
+                A career built on the front end of capital projects
+                (feasibility, technology comparison, vendor selection and basic
+                engineering) and on the process–instrumentation interface:
+                datasheets and procurement, DCS implementation and migration
+                (Yokogawa Centum 3000, SUPCON), interlock and ESD logic review,
+                and hands-on loop tuning. Has evaluated technologies and
+                suppliers from Germany, Italy, the UK and China, taking projects
+                from concept through PFD/P&amp;ID, RFQs and HAZOP/SIL to
+                erection, commissioning and master start-up.
               </p>
 
               {/* PEC Badge */}
@@ -80,102 +159,17 @@ export default function About() {
           </AnimatedSection>
         </div>
 
-        {/* ===== COMPETENCY CARDS (4-column) ===== */}
+        {/* ===== COMPETENCY CARDS ===== */}
         <StaggerContainer className={s.compGrid} staggerDelay={0.12}>
-          {/* Process Engineering */}
-          <StaggerItem className={s.compCard}>
-            <div className={`${s.compIconWrap} ${s.iconBlue}`}>
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={1.8}
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-                />
-              </svg>
-            </div>
-            <h4 className={s.compCardTitle}>Process Engineering</h4>
-            <p className={s.compCardDesc}>
-              Expert in PFDs, P&IDs, material & energy balances, equipment
-              sizing
-            </p>
-          </StaggerItem>
-
-          {/* Utilities Management */}
-          <StaggerItem className={s.compCard}>
-            <div className={`${s.compIconWrap} ${s.iconGold}`}>
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={1.8}
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                />
-              </svg>
-            </div>
-            <h4 className={s.compCardTitle}>Utilities Management</h4>
-            <p className={s.compCardDesc}>
-              Steam, cooling water, RO, compressed air, boiler systems
-            </p>
-          </StaggerItem>
-
-          {/* Commissioning */}
-          <StaggerItem className={s.compCard}>
-            <div className={`${s.compIconWrap} ${s.iconEmerald}`}>
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={1.8}
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-              </svg>
-            </div>
-            <h4 className={s.compCardTitle}>Commissioning</h4>
-            <p className={s.compCardDesc}>
-              Plant pre-commissioning, startup activities, production
-              stabilization
-            </p>
-          </StaggerItem>
-
-          {/* Safety & Compliance */}
-          <StaggerItem className={s.compCard}>
-            <div className={`${s.compIconWrap} ${s.iconPurple}`}>
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={1.8}
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                />
-              </svg>
-            </div>
-            <h4 className={s.compCardTitle}>Safety & Compliance</h4>
-            <p className={s.compCardDesc}>
-              HAZOP, HAZID, PSSR documentation, EPA compliance expertise
-            </p>
-          </StaggerItem>
+          {competencies.map((item) => (
+            <StaggerItem key={item.title} className={s.compCard}>
+              <div className={`${s.compIconWrap} ${item.color}`}>
+                {item.icon}
+              </div>
+              <h4 className={s.compCardTitle}>{item.title}</h4>
+              <p className={s.compCardDesc}>{item.desc}</p>
+            </StaggerItem>
+          ))}
         </StaggerContainer>
 
         {/* ===== INDUSTRIES ===== */}
@@ -183,15 +177,8 @@ export default function About() {
           <div className={s.industryRow}>
             <p className={s.industryLabel}>Industries Served</p>
             <div className={s.industryTags}>
-              {[
-                "Petrochemical",
-                "Pharmaceutical / API",
-                "Fertilizer",
-                "Resin Manufacturing",
-                "Oil Refinery",
-                "Chemical Processing",
-              ].map((industry, index) => (
-                <span key={index} className={s.industryTag}>
+              {industries.map((industry) => (
+                <span key={industry} className={s.industryTag}>
                   {industry}
                 </span>
               ))}

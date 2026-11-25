@@ -9,24 +9,25 @@ const experiences = [
     title: "Manager – Process Engineering & Materials",
     company: "Future Ceutical Pvt. Ltd.",
     location: "Islamabad, Pakistan",
-    period: "Jan 2023 – Present",
-    current: true,
+    period: "Jan 2023 – Aug 2023 · Apr 2024 – Jan 2026",
+    current: false,
     description: [
-      "Managing utilities monitoring, treatment, and maintenance for API units",
-      "Overseeing Nutraceutical, Cosmetics, Food, and Inactive Ingredients production",
-      "Equipment reliability management and chemical/fuel usage optimization",
+      "Led design, HAZOP and HAZID studies for 20+ reaction systems in API manufacturing",
+      "Proposed 10+ pilot plants for API baseline testing",
+      "Commissioned mineral salts and nutraceutical units integrated with Orbit ERP",
+      "Managed injectable-grade facility expansion; prepared ICH Q7 documentation that supported regulatory approval",
     ],
   },
   {
     title: "Process & Plant Manager",
-    company: "Agven Pvt. Ltd.",
+    company: "Agven Pvt. Ltd. (SOP Fertilizer Plant)",
     location: "Gwadar, Pakistan",
     period: "Feb 2024 – Mar 2024",
     current: false,
     description: [
-      "Stabilized production immediately after master startup",
-      "Resolved utilities issues in integrated cooling-tower circuit",
-      "Managed RO water treatment, air compressors, and LPG fuel monitoring",
+      "Achieved SOP quality specifications at master start-up",
+      "Stabilized production and trained the plant operating staff",
+      "Proposed the downstream product slate for the best business model",
     ],
   },
   {
@@ -36,67 +37,70 @@ const experiences = [
     period: "Sep 2023 – Feb 2024",
     current: false,
     description: [
-      "Conducted process studies for PARCO 65 TPH, 48 bar, 390°C boiler",
-      "Prepared PFDs, P&IDs, MEBs, datasheets, and RFQ documentation",
-      "Documentation for HAZOP, HAZID, and stack-dispersion studies",
+      "Process design, control and ESD engineering for the PARCO 65 TPH boiler and super heater (48 bar, 390°C)",
+      "Safety studies: HAZOP, HAZID, SIL rating, flammability and dispersion",
+      "Prepared PFDs, P&IDs, M&E balances, datasheets and RFQ documentation",
     ],
   },
   {
-    title: "Process Engineer & Technical Manager",
-    company: "PACHEM Global Private Limited",
+    title: "Lead Process Engineer & Technical Manager",
+    company: "PACHEM Global Pvt. Ltd.",
     location: "Faisalabad, Pakistan",
     period: "2018 – 2022",
     current: false,
     description: [
-      "Completed utilities assessment for PACHEM FIEDMC project",
-      "Commissioned all utilities; monitored energy and chemical consumption",
-      "Designed and commissioned compressors, nitrogen generator, and RO units",
+      "Led process design, commissioning and start-up of a 100–200 TPD phthalic anhydride plant (20–30 TPH steam) with experts from Germany, Belarus and Italy",
+      "Directed refurbishment and erection, full-plant HAZOP and SIL-3/4 logic compliance",
+      "Coordinated instrument refurbishment and procurement and the SUPCON DCS implementation, including tuning of all control loops",
+      "Commissioned plant utilities including compressors, nitrogen generator and RO units",
     ],
   },
   {
     title: "Manager – Process, Planning & Project Development",
-    company: "NIMIR Chemicals Pakistan Limited",
+    company: "NIMIR Chemicals Pakistan Ltd. (NCPL)",
     location: "Sheikhupura, Pakistan",
-    period: "2007 – 2018",
+    period: "2008 – 2018",
     current: false,
     description: [
-      "Audited 20 TPH, 30 bar steam system with multiple let-down stations",
-      "Installed 3.4 MW coal-fired heater with tie-in to German oil/gas heater",
-      "Finalized utility routes and P&IDs for Alkyd Resin Project",
+      "Directed project development including alkyd resin units, DOP distillation columns and steam systems",
+      "Developed a plasticizer pilot plant (2009) that led to commercialization of new products",
+      "Carried out feasibility studies, energy audits and effluent treatment design with European suppliers",
+      "Led the Yokogawa µXL to Centum 3000 DCS migration, field instrument audits and instrument preventive maintenance",
+      "Developed 100+ SOPs with 42 safety interlocks; conducted internal ISO 9000 audits",
     ],
   },
   {
     title: "Manager Production / Shift Manager",
-    company: "NIMIR Chemicals Pakistan Limited",
+    company: "NIMIR Chemicals Pakistan Ltd. (NCPL)",
     location: "Sheikhupura, Pakistan",
-    period: "2000 – 2006",
+    period: "2000 – 2007",
     current: false,
     description: [
-      "Managed utilities operations and monitoring",
-      "Plant revamp, expansion, and commissioning activities",
-      "Awarded merit certificate in 2007 for excellent work",
+      "Managed petrochemical plant operations, stability and troubleshooting",
+      "Plant revamp, expansion and commissioning activities",
+      "Merit performance certificate with special bonus and double increments (2006–2007)",
     ],
   },
   {
     title: "Shift Manager",
-    company: "Attock Industrial Products Limited",
+    company: "Attock Industrial Products Ltd. (POL)",
     location: "Rawalpindi, Pakistan",
     period: "1997 – 1999",
     current: false,
     description: [
-      "Managed shift operations in industrial production facility",
+      "Supervised production shifts at the industrial products plant",
       "A project of Pakistan Oilfields Limited (POL)",
     ],
   },
   {
     title: "Management Trainee Engineer",
-    company: "Attock Refinery Limited",
+    company: "Attock Refinery Ltd.",
     location: "Rawalpindi, Pakistan",
     period: "1994 – 1996",
     current: false,
     description: [
-      "Started professional career in oil refinery operations",
-      "Gained foundational experience in refinery processes",
+      "Two years of refinery training across crude distillation, preheat trains and heaters",
+      "Hands-on with LPG / naphtha and reforming units",
     ],
   },
 ];
@@ -110,8 +114,8 @@ export default function Experience() {
             <p className={s.label}>My Journey</p>
             <h2 className={s.title}>Work Experience</h2>
             <p className={s.subtitle}>
-              Over three decades of progressive experience in chemical
-              engineering, process design, and plant operations.
+              Over three decades of progressive experience in plant operations,
+              process engineering, safety and commissioning.
             </p>
             <div className={s.divider}></div>
           </div>

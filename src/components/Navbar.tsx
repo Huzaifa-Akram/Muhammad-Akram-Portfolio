@@ -6,9 +6,10 @@ import Link from "next/link";
 import s from "./Navbar.module.css";
 
 const navItems = [
-  { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
+  { name: "Achievements", href: "#achievements" },
   { name: "Experience", href: "#experience" },
+  { name: "Projects", href: "#projects" },
   { name: "Education", href: "#education" },
   { name: "Skills", href: "#skills" },
   { name: "Contact", href: "#contact" },
@@ -46,7 +47,7 @@ export default function Navbar() {
             </div>
             <div className={s.logoText}>
               <p className={s.logoName}>Engr. M. Akram Ansari</p>
-              <p className={s.logoSub}>Chemical Engineer</p>
+              <p className={s.logoSub}>Process &amp; Operations Manager</p>
             </div>
           </Link>
 

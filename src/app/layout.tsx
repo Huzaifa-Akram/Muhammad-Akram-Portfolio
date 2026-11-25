@@ -8,19 +8,27 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Engr. Muhammad Akram Ansari | Professional Chemical Engineer",
+  title: "Engr. Muhammad Akram Ansari | Process & Operations Manager",
   description:
-    "Professional Chemical Engineer with 30+ years of experience in petrochemical, resin, fertilizer, and pharmaceutical industries. PEC Registered (CHEM/02752). Expert in plant operations, utilities management, commissioning, and process engineering.",
+    "Process & Operations Manager and PEC-registered Chemical Engineer (CHEM/02752) with 30+ years in petrochemicals, resins, fertilizers and pharma/API, including 20+ years managing phthalic anhydride plants. Plant operations, process engineering, process safety (HAZOP, SIL, ESD), DCS and commissioning.",
   keywords: [
+    "Process & Operations Manager",
     "Chemical Engineer",
     "Process Engineer",
     "PEC Registered",
     "Pakistan",
-    "Utilities Management",
     "Plant Operations",
-    "Commissioning",
+    "Phthalic Anhydride",
+    "Process Safety",
     "HAZOP",
+    "SIL",
+    "ESD",
+    "DCS",
+    "Yokogawa Centum 3000",
+    "SUPCON",
+    "Commissioning",
     "Process Design",
+    "Utilities Management",
   ],
   authors: [{ name: "Muhammad Akram Ansari" }],
   icons: {
@@ -28,9 +36,9 @@ export const metadata: Metadata = {
     apple: "/apple-icon.svg",
   },
   openGraph: {
-    title: "Engr. Muhammad Akram Ansari | Professional Chemical Engineer",
+    title: "Engr. Muhammad Akram Ansari | Process & Operations Manager",
     description:
-      "Professional Chemical Engineer with 30+ years of experience. PEC Registered (CHEM/02752).",
+      "Process & Operations Manager with 30+ years in petrochemical, resin, fertilizer and pharma/API plants. PEC Registered (CHEM/02752).",
     type: "website",
     images: [
       {
@@ -43,9 +51,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Engr. Muhammad Akram Ansari | Professional Chemical Engineer",
+    title: "Engr. Muhammad Akram Ansari | Process & Operations Manager",
     description:
-      "Professional Chemical Engineer with 30+ years of experience. PEC Registered (CHEM/02752).",
+      "Process & Operations Manager with 30+ years in petrochemical, resin, fertilizer and pharma/API plants. PEC Registered (CHEM/02752).",
     images: ["/og-image.png"],
   },
 };

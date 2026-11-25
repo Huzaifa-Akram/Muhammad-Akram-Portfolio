@@ -9,7 +9,7 @@ const education = [
     degree: "B.Sc. Chemical Engineering",
     institution: "University of Engineering & Technology (UET)",
     location: "Lahore, Pakistan",
-    period: "1986 – 1992",
+    period: "1987 – 1993",
     grade: "First Division",
     details: "Faculty of Chemical, Mineral and Metallurgical Engineering",
   },

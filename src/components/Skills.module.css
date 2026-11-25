@@ -137,6 +137,12 @@
 .subIconGold {
   background: rgba(245, 158, 11, 0.15);
 }
+.subIconCyan {
+  background: rgba(6, 182, 212, 0.15);
+}
+.subIconPurple {
+  background: rgba(139, 92, 246, 0.15);
+}
 
 /* Skill bars */
 .skillList {
@@ -219,6 +225,12 @@
 
 .softwareTag:hover {
   border-color: rgba(59, 130, 246, 0.4);
+}
+
+.langLevel {
+  margin-left: 8px;
+  color: var(--text-dim);
+  font-size: 0.85em;
 }
 
 /* Expertise areas */

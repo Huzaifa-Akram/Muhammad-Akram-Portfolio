@@ -8,12 +8,12 @@ import AnimatedSection, {
 } from "./AnimatedSection";
 
 const technicalSkills = [
-  { name: "Process Engineering (PFDs, P&IDs)", level: 95 },
-  { name: "Utilities Management", level: 95 },
-  { name: "Plant Commissioning & Startup", level: 90 },
-  { name: "Material & Energy Balances", level: 92 },
-  { name: "HAZOP/HAZID/PSSR Documentation", level: 88 },
-  { name: "Steam Systems & Boilers", level: 95 },
+  { name: "Plant Operations & Troubleshooting", level: 95 },
+  { name: "Process Engineering (FEED, PFDs, P&IDs)", level: 95 },
+  { name: "Utilities, Steam & Hot-Oil Systems", level: 95 },
+  { name: "Process Safety (HAZOP, HAZID, SIL, ESD)", level: 92 },
+  { name: "Commissioning & Master Start-up", level: 92 },
+  { name: "Instrumentation, DCS & Loop Tuning", level: 90 },
 ];
 
 const softwareSkills = [
@@ -22,44 +22,69 @@ const softwareSkills = [
   "Microsoft PowerPoint",
   "Microsoft Visio",
   "PDMS (Plant Design)",
-  "Primavera P-6",
+  "Primavera P6",
+];
+
+const dcsPlatforms = ["Yokogawa µXL", "Yokogawa Centum 3000", "SUPCON DCS"];
+
+const languages = [
+  { name: "English", level: "Professional" },
+  { name: "Urdu", level: "Native" },
 ];
 
 const expertiseAreas = [
   {
-    title: "Process Design",
+    title: "Plant Operations",
     items: [
-      "Process Flow Diagrams",
-      "P&IDs",
-      "Heat & Mass Balance",
-      "Equipment Sizing",
+      "Crude, atmospheric, vacuum, batch & steam distillation",
+      "Partial-oxidation reactors (3oo3, SIL-3, 42 ESD interlocks)",
+      "Off-gas, absorption, chlorine & HCl scrubbers",
+      "Direct-fired hot-oil heaters (gas, diesel, coal)",
     ],
   },
   {
     title: "Utilities Systems",
     items: [
-      "Steam Generation",
-      "Cooling Water",
-      "Compressed Air",
-      "RO Water Treatment",
+      "Steam boilers & super heaters",
+      "Chillers & cooling towers",
+      "Air & nitrogen generation units",
+      "RO water treatment",
     ],
   },
   {
-    title: "Project Management",
+    title: "Process & Projects",
     items: [
-      "Pre-commissioning",
-      "Commissioning",
-      "Vendor Coordination",
-      "Cost Optimization",
+      "Capacity expansion, revamps & feasibility",
+      "Technology, licensor & vendor selection",
+      "FEED, basic & detailed engineering",
+      "PFDs, P&IDs, M&E balances, datasheets, RFQs",
     ],
   },
   {
     title: "Safety & Compliance",
     items: [
-      "HAZOP Studies",
-      "HAZID Analysis",
-      "PSSR Documentation",
-      "EPA Compliance",
+      "HAZOP, HAZID & SIL studies",
+      "PSSR & dispersion studies",
+      "ESD, BMC, Cause & Effect",
+      "EPA compliance & incident investigation",
+    ],
+  },
+  {
+    title: "Instrumentation & Control",
+    items: [
+      "DCS implementation & migration",
+      "Interlock & shutdown logic review",
+      "PID & cascade loop tuning",
+      "Instrument datasheets & procurement",
+    ],
+  },
+  {
+    title: "Energy & Environment",
+    items: [
+      "Energy audits of oil heaters & boilers",
+      "ETP / WWTP baseline & design studies",
+      "VOC catalytic incineration",
+      "Wastewater reduction",
     ],
   },
 ];
@@ -128,6 +153,49 @@ export default function Skills() {
                   ))}
                 </div>
               </div>
+
+              <div className={s.softwareSection}>
+                <h3 className={s.subTitle}>
+                  <span className={`${s.subIcon} ${s.subIconCyan}`}>🎛️</span>
+                  DCS Platforms
+                </h3>
+                <div className={s.softwareTags}>
+                  {dcsPlatforms.map((platform, index) => (
+                    <motion.span
+                      key={platform}
+                      className={s.softwareTag}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: 0.1 * index }}
+                    >
+                      {platform}
+                    </motion.span>
+                  ))}
+                </div>
+              </div>
+
+              <div className={s.softwareSection}>
+                <h3 className={s.subTitle}>
+                  <span className={`${s.subIcon} ${s.subIconPurple}`}>🌐</span>
+                  Languages
+                </h3>
+                <div className={s.softwareTags}>
+                  {languages.map((language, index) => (
+                    <motion.span
+                      key={language.name}
+                      className={s.softwareTag}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: 0.1 * index }}
+                    >
+                      {language.name}
+                      <span className={s.langLevel}>{language.level}</span>
+                    </motion.span>
+                  ))}
+                </div>
+              </div>
             </div>
           </AnimatedSection>
 
@@ -161,9 +229,9 @@ export default function Skills() {
         <StaggerContainer className={s.statsGrid} staggerDelay={0.12}>
           {[
             { label: "Years Experience", value: "30+" },
-            { label: "Projects", value: "50+" },
-            { label: "Companies", value: "8" },
-            { label: "Industries", value: "6+" },
+            { label: "SOPs Developed", value: "100+" },
+            { label: "Safety Interlocks", value: "42" },
+            { label: "Industries Served", value: "6+" },
           ].map((stat, index) => (
             <StaggerItem key={index} className={s.statCard}>
               <p className={s.statValue}>{stat.value}</p>

@@ -51,7 +51,17 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              Professional Chemical Engineer
+              Process &amp; Operations Manager
+            </motion.p>
+
+            <motion.p
+              className={s.tagline}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.55 }}
+            >
+              Plant Operations · Process Engineering · Safety &amp;
+              Commissioning
             </motion.p>
 
             <motion.p
@@ -60,10 +70,12 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              Over <span className={s.highlight}>30 years</span> of expertise in
-              petrochemical, resin, fertilizer, and pharmaceutical industries.
-              Specialized in plant operations, utilities management, and process
-              engineering.
+              Chemical engineer with{" "}
+              <span className={s.highlight}>30+ years</span> of operations
+              experience across petrochemicals, resins, fertilizers and
+              pharma/API, including{" "}
+              <span className={s.highlight}>20+ years</span> managing two major
+              phthalic anhydride (PA) plants on Lurgi technology.
             </motion.p>
 
             <motion.div
@@ -77,12 +89,12 @@ export default function Hero() {
                 <p className={s.statLabel}>Years Exp.</p>
               </div>
               <div className={s.statCard}>
-                <p className={s.statValue}>8+</p>
-                <p className={s.statLabel}>Companies</p>
+                <p className={s.statValue}>20+</p>
+                <p className={s.statLabel}>Yrs in PA Plants</p>
               </div>
               <div className={s.statCard}>
-                <p className={s.statValue}>50+</p>
-                <p className={s.statLabel}>Projects</p>
+                <p className={s.statValue}>+30%</p>
+                <p className={s.statLabel}>Capacity Gain</p>
               </div>
             </motion.div>
 

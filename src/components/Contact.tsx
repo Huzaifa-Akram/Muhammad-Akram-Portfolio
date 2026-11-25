@@ -64,8 +64,10 @@ export default function Contact() {
             <div>
               <h3 className={s.infoTitle}>Let&apos;s Connect</h3>
               <p className={s.infoDesc}>
-                Available for consulting and advisory roles in chemical
-                engineering, process design, and utilities management.
+                Open to process and operations management roles, plant
+                commissioning and start-up assignments, and technical
+                consulting in petrochemicals, fertilizers, resins and
+                pharma/API.
               </p>
 
               <div className={s.infoCards}>
@@ -76,10 +78,10 @@ export default function Contact() {
                   <div>
                     <p className={s.infoLabel}>Email</p>
                     <a
-                      href="mailto:abdullah1772013@gmail.com"
+                      href="mailto:thesahra15@gmail.com"
                       className={s.infoLink}
                     >
-                      abdullah1772013@gmail.com
+                      thesahra15@gmail.com
                     </a>
                   </div>
                 </div>
@@ -105,7 +107,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className={s.infoLabel}>Location</p>
-                    <p className={s.infoText}>Lahore, Pakistan</p>
+                    <p className={s.infoText}>Lalamusa, Gujrat, Pakistan</p>
                   </div>
                 </div>
 
@@ -116,12 +118,12 @@ export default function Contact() {
                   <div>
                     <p className={s.infoLabel}>LinkedIn</p>
                     <a
-                      href="https://linkedin.com/in/muhammad-akram-ansari"
+                      href="https://www.linkedin.com/in/muhammad-akram-a-a07ab8416/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`${s.infoLink} ${s.infoLinkPurple}`}
                     >
-                      linkedin.com/in/muhammad-akram-ansari
+                      linkedin.com/in/muhammad-akram-a-a07ab8416
                     </a>
                   </div>
                 </div>
